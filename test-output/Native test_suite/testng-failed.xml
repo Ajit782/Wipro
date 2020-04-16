@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Native test_suite]">
+  <listeners>
+    <listener class-name="core.Listener"/>
+  </listeners>
+  <test name="Module 1(failed)">
+    <classes>
+      <class name="test.AmazonTest">
+        <methods>
+          <include name="testSearchAndCompare"/>
+          <include name="beforeSuite"/>
+        </methods>
+      </class> <!-- test.AmazonTest -->
+    </classes>
+  </test> <!-- Module 1(failed) -->
+</suite> <!-- Failed suite [Native test_suite] -->
