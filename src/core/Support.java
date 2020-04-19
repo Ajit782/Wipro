@@ -13,7 +13,6 @@ public class Support extends BaseTestCase{
 	File srcFiler=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 	
 	public static void takeScreenshot(String filename) {
-		System.out.println("Capturing the snapshot of the '"+ filename+"' page ");
 		Reporter.log("Capturing the snapshot of the '"+ filename+"' page ");
 		
 		File srcFiler=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
@@ -23,8 +22,6 @@ public class Support extends BaseTestCase{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-	
-		System.out.println("Snapshot Captured");
 		Reporter.log("Snapshot Captured");
 	}
 	

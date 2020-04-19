@@ -7,10 +7,12 @@ import java.io.IOException;
 import java.lang.reflect.Method;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.time.Duration;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.log4j.Logger;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
@@ -33,6 +35,7 @@ import com.relevantcodes.extentreports.ExtentReports;
 import core.Config;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
+import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.events.EventFiringWebDriverFactory;
@@ -111,7 +114,6 @@ public class BaseTestCase extends Config {
 			capabilities.setCapability(MobileCapabilityType.FULL_RESET, ANDROID_FULL_RESET);
 			capabilities.setCapability("printPageSourceOnFindFailure", "true");
 			capabilities.setCapability(MobileCapabilityType.APP, ANDROID_APP);
-			//capabilities.setCapability("platformVersion", "9");
 			capabilities.setCapability("appPackage", ANDROID_PKG_ID);
 			capabilities.setCapability("appActivity", ANDROID_ACTIVITY_ID);
 			capabilities.setCapability("appWaitActivity", ANDROID_WAIT_ACTIVITY_ID);
@@ -121,8 +123,6 @@ public class BaseTestCase extends Config {
 			try {
 				log.info("setting capabilities : " + capabilities);
 				driver = new AndroidDriver<AndroidElement>(new URL("http://"+APPIUM_SERVER_URL+"/wd/hub"), capabilities);
-				//driver = new AndroidDriver<AndroidElement>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
-				
 				log.info("created driver instance");
 			} catch (Exception e) {
 				log.error("not able to create driver instance");
@@ -138,8 +138,7 @@ public class BaseTestCase extends Config {
 		driver.manage().timeouts().implicitlyWait(Integer.parseInt(props.getProperty("driver.timeout")),
 				TimeUnit.MILLISECONDS);
 		log.info("Driver Initialized.....");
-		System.out.println("Driver Initialized.....");
-		Reporter.log("Driver Initialized.....");
+		
 	}
 	
 	 @BeforeSuite
@@ -208,6 +207,14 @@ public class BaseTestCase extends Config {
 			}
 			
 			extent.close();
+		}
+	 
+	 public static void swipeVeritcal(AppiumDriver<MobileElement> driver,double startPercentage,double finalPercentage,int duration){
+			Dimension size=driver.manage().window().getSize();
+			int width =(int) (size.width/2);
+			int startPoint=(int) (size.getHeight() * startPercentage);
+			int endPoint=(int) (size.getHeight() * finalPercentage);
+			new TouchAction(driver).press(width,startPoint).waitAction(Duration.ofMillis(duration)).moveTo(width,endPoint).release().perform();
 		}
 	
 }

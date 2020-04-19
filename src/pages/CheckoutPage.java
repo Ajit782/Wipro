@@ -38,7 +38,7 @@ public class CheckoutPage extends BaseTestPage{
 	
 	
 	WebDriverWait wait=new WebDriverWait(driver, 20);
-
+	
 	@Override
 	public void waitForPageToLoad() {
 		

@@ -11,7 +11,7 @@ public class FileInput {
 	//Method to Extract Data from Excel Sheet
 	public Sheet SheetData() throws BiffException, IOException , NullPointerException{
 		
-		String FilePath = "D:\\AmazonAssignment\\resources\\TestData.xlsx";// excel path
+		String FilePath = "C:\\Assingment\\MobileAutomation\\resources\\TestData.xlsx";// excel path
 		FileInputStream fileInputStream = new FileInputStream(FilePath);
 		Workbook workbook = Workbook.getWorkbook(fileInputStream);
 		Sheet sheet = workbook.getSheet(0);//To get access of sheet1 

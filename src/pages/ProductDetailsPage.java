@@ -7,6 +7,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
+
+import core.BaseTestCase;
 import core.BaseTestPage;
 import core.TestReporter;
 import core.Utility;
@@ -19,7 +21,7 @@ public class ProductDetailsPage extends BaseTestPage{
 	
 	@FindBy(xpath = "//*[@resource-id='buyNowCheckout']")
 	private WebElement buttonBuyNow;
-
+	
 	@Override
 	public void waitForPageToLoad() {
 		WebDriverWait wait=new WebDriverWait(driver, 20);
@@ -48,7 +50,7 @@ public class ProductDetailsPage extends BaseTestPage{
 	public ProductDetailsPage clickBuyNowButton() {
 		try {
 			while(!(buttonBuyNow.isDisplayed())){ 	
-			Utility.swipeVeritcal(driver, 0.9, 0.2, 2); //Scroll Down till Buy Now button displayed
+			BaseTestCase.swipeVeritcal(driver, 0.9, 0.2, 2); //Scroll Down till Buy Now button displayed
 			}
 			buttonBuyNow.click();
 			Reporter.log("Buy Now button is clicked");

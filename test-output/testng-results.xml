@@ -2,16 +2,16 @@
 <testng-results skipped="1" failed="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="21" started-at="2020-04-16T13:28:52Z" finished-at="2020-04-16T13:28:52Z">
+  <suite name="Default suite" duration-ms="25" started-at="2020-04-18T13:40:04Z" finished-at="2020-04-18T13:40:04Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="21" started-at="2020-04-16T13:28:52Z" finished-at="2020-04-16T13:28:52Z">
+    <test name="Default test" duration-ms="25" started-at="2020-04-18T13:40:04Z" finished-at="2020-04-18T13:40:04Z">
       <class name="test.AmazonTest">
-        <test-method status="FAIL" signature="beforeSuite(org.testng.ITestContext)[pri:0, instance:test.AmazonTest@475530b9]" name="beforeSuite" is-config="true" duration-ms="0" started-at="2020-04-16T18:57:12Z" finished-at="2020-04-16T18:57:12Z">
+        <test-method status="FAIL" signature="beforeSuite(org.testng.ITestContext)[pri:0, instance:test.AmazonTest@475530b9]" name="beforeSuite" is-config="true" duration-ms="0" started-at="2020-04-18T19:10:01Z" finished-at="2020-04-18T19:10:01Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@223aa2f7]]>
+                <![CDATA[org.testng.TestRunner@65f095f8]]>
               </value>
             </param>
           </params>
@@ -19,7 +19,7 @@
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException
 	at core.BaseTestCase.startAppium(BaseTestCase.java:138)
-	at core.BaseTestCase.beforeSuite(BaseTestCase.java:151)
+	at core.BaseTestCase.beforeSuite(BaseTestCase.java:150)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -44,19 +44,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeSuite -->
-        <test-method status="SKIP" signature="beforeMethod(org.testng.ITestContext, java.lang.reflect.Method)[pri:0, instance:test.AmazonTest@475530b9]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2020-04-16T18:58:52Z" finished-at="2020-04-16T18:58:52Z">
+        <test-method status="SKIP" signature="beforeMethod(org.testng.ITestContext, java.lang.reflect.Method)[pri:0, instance:test.AmazonTest@475530b9]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2020-04-18T19:10:04Z" finished-at="2020-04-18T19:10:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="SKIP" signature="testSearchAndCompare()[pri:0, instance:test.AmazonTest@475530b9]" name="testSearchAndCompare" duration-ms="2" started-at="2020-04-16T18:58:52Z" finished-at="2020-04-16T18:58:52Z">
+        <test-method status="SKIP" signature="testSearchAndCompare()[pri:0, instance:test.AmazonTest@475530b9]" name="testSearchAndCompare" duration-ms="1" started-at="2020-04-18T19:10:04Z" finished-at="2020-04-18T19:10:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSearchAndCompare -->
-        <test-method status="SKIP" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:test.AmazonTest@475530b9]" name="afterMethod" is-config="true" duration-ms="0" started-at="2020-04-16T18:58:52Z" finished-at="2020-04-16T18:58:52Z">
+        <test-method status="SKIP" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:test.AmazonTest@475530b9]" name="afterMethod" is-config="true" duration-ms="0" started-at="2020-04-18T19:10:04Z" finished-at="2020-04-18T19:10:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="SKIP" signature="afterSuite(org.testng.ITestContext)[pri:0, instance:test.AmazonTest@475530b9]" name="afterSuite" is-config="true" duration-ms="0" started-at="2020-04-16T18:58:52Z" finished-at="2020-04-16T18:58:52Z">
+        <test-method status="SKIP" signature="afterSuite(org.testng.ITestContext)[pri:0, instance:test.AmazonTest@475530b9]" name="afterSuite" is-config="true" duration-ms="0" started-at="2020-04-18T19:10:04Z" finished-at="2020-04-18T19:10:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterSuite -->
